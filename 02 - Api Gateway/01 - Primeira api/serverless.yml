@@ -6,6 +6,11 @@ provider:
   name: aws
   runtime: python3.7
 
+package:
+  exclude:
+    - img/**
+    - README.md
+
 functions:
   hello:
     handler: handler.lambda_handler
