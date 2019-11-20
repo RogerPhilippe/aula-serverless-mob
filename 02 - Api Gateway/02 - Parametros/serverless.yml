@@ -5,7 +5,7 @@ provider:
   runtime: python3.6
 
 # you can overwrite defaults here
-stage: turma-serverless
+stage: production
 functions:
   readCustomer:
     handler: handler.handler
