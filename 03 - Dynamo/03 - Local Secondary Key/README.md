@@ -18,3 +18,4 @@
 10. Escolha uma store e altere o arquivo 'dynamo.py'
 ![img/localsecondaryindex07.png](img/localsecondaryindex07.png)
 11. Execute o comando `python3 dynamo.py`
+    
