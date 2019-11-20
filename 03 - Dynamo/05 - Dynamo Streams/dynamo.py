@@ -7,4 +7,4 @@ from datetime import datetime
 dao = BaseDAO('table1')
 
 for i in range(10):
-    dao.put_item({'xpto':str(i)})
+    dao.put_item({'user':str(i)})
