@@ -1,0 +1,33 @@
+
+
+service: sqstesttrigger
+
+provider:
+  name: aws
+  runtime: python3.7
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - sqs:SendMessage
+        - sqs:ReceiveMessage
+        - sqs:DeleteMessage
+        - sqs:GetQueueAttributes
+      Resource:
+        Fn::GetAtt: [BroadcastMessageQueue, Arn]
+functions:
+  hello:
+    handler: handler.hello
+    reservedConcurrency: 10
+    events:
+      - sqs: 
+        arn:
+          Fn::GetAtt: [BroadcastMessageQueue, Arn]
+        batchSize: 1
+
+resources:
+  Resources:
+    BroadcastMessageQueue:
+      Type: AWS::SQS::Queue
+      Properties:
+        QueueName: testelambdatrigger
+        VisibilityTimeout: 300
