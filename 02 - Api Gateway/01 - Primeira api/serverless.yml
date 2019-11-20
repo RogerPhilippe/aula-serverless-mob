@@ -1,0 +1,11 @@
+
+service: primeira-api
+
+
+provider:
+  name: aws
+  runtime: python3.7
+
+functions:
+  hello:
+    handler: handler.lambda_handler
