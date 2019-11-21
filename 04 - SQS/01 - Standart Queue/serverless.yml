@@ -14,8 +14,8 @@ provider:
         - sqs:SendMessage
       Resource: "arn:aws:sqs:us-east-1:*:demoqueue*"
   environment:
-    sqs_url: "https://sqs.us-east-1.amazonaws.com/799348652687/demoqueue"
-    sqs_url_dest: "https://sqs.us-east-1.amazonaws.com/799348652687/demoqueue_dest"
+    sqs_url: <URL FILA PRINCIPAL>
+    sqs_url_dest: <URL FILA DESTINO>
 functions:
   sqsHandler:
     handler: lambda.handler
