@@ -1,0 +1,13 @@
+service: sns-to-slack
+
+provider:
+  name: aws
+  runtime: python3.6
+  timeout: 10
+
+functions:
+  sendtoslack:
+    handler: lambda.lambda_handler
+    events:
+      - sns:
+        arn: arn:aws:sns:us-east-1:867061838226:toslack
