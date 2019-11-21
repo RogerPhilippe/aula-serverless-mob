@@ -13,6 +13,3 @@
 9. Execute o comando `python3 consumer.py` no terminal
 10. Observe que enquanto roda o script a fila DLQ é populada no console do SQS
     ![img/dlq-04.png](img/dlq-04.png)
-
-
-
